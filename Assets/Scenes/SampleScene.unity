@@ -183,7 +183,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 21.39
+  orthographic size: 35.27
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -353,6 +353,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 556467960}
+  - {fileID: 1724702192}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1102410003
@@ -394,7 +395,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c12af28bc5732418ca8b6fa6c535a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 33
+  maxMoveSpeed: 69.46
+  maxVerticalSpeed: 26.36
+  acceleration: 108.6
+  deceleration: 99
+  currentVelocity: {x: 0, y: 0}
+  projectilePrefab: {fileID: 7489975952475623793, guid: 1de808eeb6a320641a1a8ae25436154b, type: 3}
+  projectilePosition: {fileID: 1724702192}
+  fireRate: 0.3
 --- !u!61 &1102410005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -440,6 +448,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.686661, y: 2.3019753}
   m_EdgeRadius: 0
+--- !u!1 &1724702191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724702192}
+  m_Layer: 0
+  m_Name: ProjectilePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1724702192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724702191}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.68, y: -0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1102410002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

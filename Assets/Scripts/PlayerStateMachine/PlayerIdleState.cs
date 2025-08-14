@@ -27,7 +27,7 @@ public class PlayerIdleState : PlayerState
     {
         base.Update();
 
-        if (xInput != 0.0f)
+        if (xInput != 0.0f || yInput != 0.0f)
         {
             stateMachine.ChangeState(player.moveState);
         }

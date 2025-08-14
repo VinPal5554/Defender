@@ -39,6 +39,8 @@ public class PlayerState
 
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
+
+
     }
 
     public virtual void Exit() {

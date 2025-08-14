@@ -6,8 +6,17 @@ public class Player : Entity
 {
 
     [Header("Movement Stuff")]
-    public float moveSpeed = 12.0f;
+    public float maxMoveSpeed = 10f;
+    public float maxVerticalSpeed = 6f;
+    public float acceleration = 20f;
+    public float deceleration = 15f;
 
+    [HideInInspector] public Vector2 currentVelocity;
+
+    public GameObject projectilePrefab;
+    public Transform projectilePosition;
+    public float fireRate = 0.3f;
+    private float fireCooldown = 0.0f;
 
 
     public PlayerStateMachine stateMachine {  get; private set; }
@@ -37,5 +46,29 @@ public class Player : Entity
 
         stateMachine.currentState.Update();
 
+        HandleShooting();
+        if (fireCooldown > 0f)
+        {
+            fireCooldown -= Time.deltaTime;
+        }
+
+    }
+
+    void HandleShooting()
+    {
+        if (Input.GetKey(KeyCode.Space) && fireCooldown <= 0f)
+        {
+            Shoot();
+            fireCooldown = fireRate;
+        }
+    }
+
+    public void Shoot()
+    {
+        GameObject bullet = Instantiate(projectilePrefab, projectilePosition.position, Quaternion.identity);
+        Projectile proj = bullet.GetComponent<Projectile>();
+
+        Vector2 shootDir = facingRight ? Vector2.right : Vector2.left;
+        proj.SetDirection(shootDir);
     }
 }

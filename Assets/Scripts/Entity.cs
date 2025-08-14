@@ -9,6 +9,8 @@ public class Entity : MonoBehaviour
     public SpriteRenderer sr { get; private set; }
     public BoxCollider2D bc { get; private set; }
 
+    public int facingDirection { get; private set; } = 1;
+    protected bool facingRight = true;
 
 
     protected virtual void Awake()
@@ -33,7 +35,25 @@ public class Entity : MonoBehaviour
     public virtual void SetVelocity(float _xVelocity,  float _yVelocity)
     {
         rb.velocity = new Vector2(_xVelocity, _yVelocity);
+
+       // FlipController(_xVelocity);
     }
 
+    public virtual void Flip()
+    {
+        facingDirection *= -1;
+        facingRight = !facingRight;
 
+        transform.Rotate(0, 180, 0);
+
+       
+    }
+
+    public virtual void FlipController(float direction)
+    {
+        if (direction > 0 && !facingRight)
+            Flip();
+        else if (direction < 0 && facingRight)
+            Flip();
+    }
 }
