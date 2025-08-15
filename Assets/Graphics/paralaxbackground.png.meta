@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab4f101bdddad6e499b5a43f83e9e1a3
+guid: 131cb39ecc70cf24fb5fae529fd3b2da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 5
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: human_0
+      name: paralaxbackground_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 39
+        width: 600
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6ec7e9b9cd9e2843ac48608eb583dfb
-      internalID: 1907446158
+      spriteID: 51d15dcf0d17ca8419611f1d06bbbe6e
+      internalID: 1014545356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_1
+      name: paralaxbackground_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 600
         y: 0
-        width: 16
-        height: 39
+        width: 600
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41098dd1d4050ea43bc88340c12177de
-      internalID: 979453394
+      spriteID: cdc0748f4c7c1a5458809e9e4fa8937f
+      internalID: 1161480861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: human_2
+      name: paralaxbackground_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 1200
         y: 0
-        width: 16
-        height: 39
+        width: 600
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,134 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed1bc097da6b3194db1c14cadab05e85
-      internalID: 1374471175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: human_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6051f0271dedbad4289553f6c29c018a
-      internalID: -732235663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: human_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d63853ea48b90e84aba443f3c0716b71
-      internalID: -111365253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: human_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0bccf9bca153f5479a60598556a5086
-      internalID: 1210887448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: human_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1faa695f3f38a28408ddedaeb31c82c9
-      internalID: 1131094725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: human_7
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8940e79467a46048a60fad247f64bc1
-      internalID: -2054613830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: human_8
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 16
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fe0c28a2724a254fbd1ce4375b2f28d
-      internalID: 417077723
+      spriteID: 960ab3b17bdc40e4bb9e05a0fbd499d2
+      internalID: -655608206
       vertices: []
       indices: 
       edges: []
@@ -309,15 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      human_0: 1907446158
-      human_1: 979453394
-      human_2: 1374471175
-      human_3: -732235663
-      human_4: -111365253
-      human_5: 1210887448
-      human_6: 1131094725
-      human_7: -2054613830
-      human_8: 417077723
+      paralaxbackground_0: 1014545356
+      paralaxbackground_1: 1161480861
+      paralaxbackground_2: -655608206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
