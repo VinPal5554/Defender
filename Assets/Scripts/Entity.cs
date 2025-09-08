@@ -12,6 +12,8 @@ public class Entity : MonoBehaviour
     public int facingDirection { get; private set; } = 1;
     protected bool facingRight = true;
 
+    [Header("Death Effect")]
+    public GameObject deathEffectPrefab;
 
     protected virtual void Awake()
     {
@@ -55,5 +57,33 @@ public class Entity : MonoBehaviour
             Flip();
         else if (direction < 0 && facingRight)
             Flip();
+    }
+
+    public virtual void Die()
+    {
+        // 1. Hide the sprite & disable the collider
+        if (sr != null) sr.enabled = false;
+        if (bc != null) bc.enabled = false;
+
+        // 2. Stop movement
+        if (rb != null) rb.velocity = Vector2.zero;
+
+        // 3. Play particle effect
+        if (deathEffectPrefab != null)
+        {
+            GameObject effect = Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+            ParticleSystem ps = effect.GetComponent<ParticleSystem>();
+            if (ps != null)
+            {
+                Destroy(effect, ps.main.duration + ps.main.startLifetime.constantMax);
+            }
+            else
+            {
+                Destroy(effect, 2f); // fallback destroy time
+            }
+        }
+
+        // 4. Destroy the entity
+        Destroy(gameObject);
     }
 }

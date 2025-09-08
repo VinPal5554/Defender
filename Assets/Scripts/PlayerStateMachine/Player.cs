@@ -71,4 +71,13 @@ public class Player : Entity
         Vector2 shootDir = facingRight ? Vector2.right : Vector2.left;
         proj.SetDirection(shootDir);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Enemy enemy = other.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            Die(); 
+        }
+    }
 }

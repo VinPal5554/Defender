@@ -44,4 +44,14 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player")) return;
+
+        Entity entity = other.GetComponent<Entity>();
+        if (entity != null)
+        {
+            entity.Die(); // universal death
+        }
+    }
 }

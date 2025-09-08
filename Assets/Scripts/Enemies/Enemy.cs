@@ -8,7 +8,7 @@ public class Enemy : Entity
 
     [Header("Move Stuff")]
     public float moveSpeed;
-    public float idleState;
+    public float idleTime;
     public float battleTime;
 
     public EnemyStateMachine stateMachine { get; private set; }
@@ -26,4 +26,6 @@ public class Enemy : Entity
 
         stateMachine.currentState.Update();
     }
+
+
 }
